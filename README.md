@@ -12,7 +12,7 @@ GOODNOOD fossilizes the invocation lattice for The Qube by linking sealed capsul
 - **Marketing Relay**: `relay.trailer.legoF1.plan.v1` documents the Lego F1 25 trailer reproduction plan, bridging public artifactization with the runtime ledger.
 
 ### Rituals
-- **Freeze & Seal**: Canonicalize, hash, and seal capsules with quorum. Use [`scripts/freeze_q9_pivot.sh`](scripts/freeze_q9_pivot.sh) to stage the Q9 pivot capsule and [`scripts/freeze_cartesian_map.sh`](scripts/freeze_cartesian_map.sh) to fossilize the cartesian map capsule.
+- **Freeze & Seal**: Canonicalize, hash, and seal capsules with quorum. Use [`scripts/freeze_q9_pivot.sh`](scripts/freeze_q9_pivot.sh) to stage the Q9 pivot capsule, [`scripts/freeze_cartesian_map.sh`](scripts/freeze_cartesian_map.sh) to fossilize the cartesian map capsule, and [`scripts/freeze_embedding_pref.sh`](scripts/freeze_embedding_pref.sh) to seal the embedding preference capsule after validation with [`scripts/validate_embedding_pref.sh`](scripts/validate_embedding_pref.sh).
 - **Relay**: Emit motion ledgers and clip fossils into the runtime so that Monza relay math and cockpit choreography remain aligned.
 - **Adjudication**: Prefer sealed, immutable capsules when resolving conflicts, keeping SSOT lineage intact.
 - **Federation**: Broadcast sealed bundles such as the Canon Kit to partners and engines to maintain a shared sovereign lattice.
