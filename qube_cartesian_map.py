@@ -99,11 +99,18 @@ QUBE_CARTESIAN_NODES: Tuple[QubeNode, ...] = (
         position=(0, 0),
     ),
     QubeNode(
-        node_id="map",
-        capsule_ref="capsule.map.qube.endtoend.v1",
-        description="Cockpit index enumerating the sovereign lattice",
+        node_id="cartesian_map",
+        capsule_ref="capsule.map.qube.cartesian.v1",
+        description="Canonical cartesian lattice map sealed for runtime",
         layer="graph",
         position=(1, 0),
+    ),
+    QubeNode(
+        node_id="pedagogy",
+        capsule_ref="capsule.relay.pedagogy.queenboo.v1",
+        description="Contributor descent capsule binding training loops",
+        layer="training",
+        position=(2, 1),
     ),
     QubeNode(
         node_id="marketing",
@@ -111,6 +118,13 @@ QUBE_CARTESIAN_NODES: Tuple[QubeNode, ...] = (
         description="Public relay plan for Lego F1 25 trailer",
         layer="broadcast",
         position=(2, 0),
+    ),
+    QubeNode(
+        node_id="federation",
+        capsule_ref="capsule.federate.v1",
+        description="Broadcast frame for distributing sealed bundles",
+        layer="broadcast",
+        position=(3, 0),
     ),
 )
 
@@ -127,7 +141,7 @@ QUBE_CARTESIAN_EDGES: Tuple[QubeEdge, ...] = (
     ),
     QubeEdge(
         source="qulock",
-        target="map",
+        target="cartesian_map",
         rationale="Runtime engine feeds the cockpit map",
     ),
     QubeEdge(
@@ -136,9 +150,19 @@ QUBE_CARTESIAN_EDGES: Tuple[QubeEdge, ...] = (
         rationale="Pivot node consumes motion embeddings",
     ),
     QubeEdge(
-        source="map",
+        source="cartesian_map",
+        target="pedagogy",
+        rationale="Map anchors contributor descent rituals",
+    ),
+    QubeEdge(
+        source="cartesian_map",
         target="marketing",
         rationale="Cockpit map informs marketing relay broadcast",
+    ),
+    QubeEdge(
+        source="cartesian_map",
+        target="federation",
+        rationale="Sealed map is broadcast across the federation mesh",
     ),
 )
 
