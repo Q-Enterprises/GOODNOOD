@@ -1,0 +1,23 @@
+{
+  "capsule_id": "capsule.node.q9.pivot.v1",
+  "version": "1.0.0",
+  "type": "GraphPivotNode",
+  "context": {
+    "graph_ref": "capsule.prompt.graph.cici.v1",
+    "artifact_ref": "adaptco/GOODNOOD#artifact.scan.hash",
+    "execution_env": "codex.env.adaptco.goodnood.v1"
+  },
+  "inputs": ["adapted_emb", "control_map", "artifact_hash"],
+  "outputs": ["pivoted_emb", "relay_ready_latent"],
+  "logic": {
+    "merge": "semantic + physical",
+    "continuity": "fail_closed_on_mismatch",
+    "checkpoint_resume": true
+  },
+  "audit": {
+    "maker": "Scrollsmith",
+    "checker": "Council",
+    "status": "PENDING"
+  },
+  "attestation": { "status": "STAGED" }
+}
