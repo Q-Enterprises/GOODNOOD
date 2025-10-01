@@ -42,6 +42,13 @@ between staging and fossilization. Walk this lattice with intention.
 - **Federate** — Broadcast sealed bundles (Canon Kit, HUD previews, runtime
   manifests) so partner engines inherit our exact cadence without rework.
 
+### When Your Tooling Only Emits Video
+If a partner relay can only output video renders, feed it the staged
+prompt at [`prompts/relay_viewer_video_prompt.txt`](prompts/relay_viewer_video_prompt.txt).
+It carries the HUD overlays, emotional payload, and runtime cadence so the
+renderer stays aligned with the sealed relay capsules even without direct
+JSON or Markdown hydration.
+
 ### Ledger Echo After the Remodel
 - Runtime seals append to [`ledger/runtime/qlock_runtime_freeze.log`](ledger/runtime/qlock_runtime_freeze.log).
 - HUD rehearsals log into [`ledger/relay/relay_viewer_freeze.log`](ledger/relay/relay_viewer_freeze.log).

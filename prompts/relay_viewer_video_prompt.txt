@@ -1,0 +1,15 @@
+Title: Sovereign Relay HUD Preview
+
+Prompt:
+Render a 12-second HUD rehearsal loop of Queen Boo guiding the cockpit.
+The camera is anchored to the Monza podium, locked at horizon height.
+Show synchronized overlays for glyph.pulse, aura.gold, qlock.tick,
+and hud.qdot.delta. The choreography follows the sealed capsule
+`capsule.relay.queenboo.v1`, referencing gesture traces from
+`capsule.relay.pedagogy.queenboo.v1`. Maintain the emotional payload of
+sovereign allure blended with loop sync readiness. Ensure the glyphstream
+aligns with the QLOCK runtime cadence at 30 Hz and freeze each frame with
+scrollstream fidelity.
+
+Negative Prompt:
+No grain, no handheld jitter, no desaturation, no unauthorized overlays.
