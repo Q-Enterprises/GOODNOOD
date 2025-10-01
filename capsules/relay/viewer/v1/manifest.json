@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.relay.viewer.v1",
+    "version": "1.0.0",
+    "type": "RelayViewer",
+    "protocol": "AxQxOS",
+    "schema": "p3l://relay.viewer",
+    "purpose": "Stage viewer relay capsule for HUD rehearsal and Council attestation",
+    "state": "STAGED"
+  },
+  "summary": {
+    "telemetry_stream": "capsule.telemetry.render.v1.events_examples",
+    "motion_ledger": "capsule.motion.ledger.v1",
+    "semantic_tensor": "tensor.semantic.cici.v2",
+    "prompt_braid": "capsule.prompt.qube.v1",
+    "hud_channels": [
+      "glyph.pulse",
+      "aura.gold",
+      "qlock.tick",
+      "hud.qdot.delta"
+    ],
+    "ritual_steps": 5,
+    "governance_quorum": 3
+  },
+  "canonical": {
+    "path": "canonical.json",
+    "body_digest": null,
+    "last_hydrated": null
+  },
+  "attestation": {
+    "status": "STAGED",
+    "sealed_by": null,
+    "sealed_at": null,
+    "content_hash": null
+  },
+  "ledger": {
+    "freeze_script": "scripts/freeze_relay_viewer.sh",
+    "log_file": "ledger/relay/relay_viewer_freeze.log"
+  }
+}
