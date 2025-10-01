@@ -1,0 +1,48 @@
+{
+  "capsule_id": "capsule.engine.qlock.runtime.v1",
+  "version": "1.0.0",
+  "type": "RuntimeEngine",
+  "purpose": "Formalize QLOCK as the sovereign rendering engine for Q.Enterprise emissions",
+  "engine_id": "QLOCKRenderEngine.v1",
+  "source": {
+    "artifact": "capsule.engine.qlock.runtime.v1.canon.json"
+  },
+  "replay": {
+    "token": "engine.qlock.runtime.v1:20250925",
+    "sealed_state": "SEALED"
+  },
+  "bindings": {
+    "token_time_binding": "capsule.timestamp.hash.v1",
+    "vector_field_control": "capsule.vector.trace.v1",
+    "render_fidelity": "glyphstream.overlay.v2",
+    "counterfactual_balancing": [
+      "capsule.fork.audit.v1",
+      "capsule.linkage.trace.v1",
+      "emotional_payload.audit.v1"
+    ]
+  },
+  "linked_capsules": [
+    "capsule.relay.queenboo.v1",
+    "capsule.trace.mimic.queenboo.v1",
+    "capsule.braid.parent.queenboo.v1",
+    "capsule.codex.scrollsmith.committrail.v1"
+  ],
+  "interfaces": {
+    "hud_preview": "capsule.preview.hud.cici.render.v1",
+    "relay_invocation": "capsule.relay.echo.queenboo.v1"
+  },
+  "ledger": {
+    "freeze_log": "ledger/qlock_runtime_freeze.log"
+  },
+  "attestation": {
+    "status": "SEALED",
+    "sealed_by": [
+      "Scrollsmith",
+      "CouncilNode_01",
+      "CouncilNode_03",
+      "CouncilNode_08"
+    ],
+    "sealed_at": "2025-09-25T04:45:25Z",
+    "content_hash": "sha256:44e30585c34a28db23a3e403f2fa3217f5c807e00b4357c6ce5f6f383d756ef7"
+  }
+}
