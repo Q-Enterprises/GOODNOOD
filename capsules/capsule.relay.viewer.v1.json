@@ -1,0 +1,43 @@
+{
+  "capsule_id": "capsule.relay.viewer.v1",
+  "version": "1.0.0",
+  "type": "RelayViewer",
+  "protocol": "AxQxOS",
+  "schema": "p3l://relay.viewer",
+  "purpose": "Stage viewer relay capsule for HUD rehearsal and Council attestation",
+  "bindings": {
+    "telemetry_stream": "capsule.telemetry.render.v1.events_examples",
+    "motion_ledger": "capsule.motion.ledger.v1",
+    "semantic_tensor": "tensor.semantic.cici.v2",
+    "prompt_braid": "capsule.prompt.qube.v1"
+  },
+  "hud_channels": [
+    "glyph.pulse",
+    "aura.gold",
+    "qlock.tick",
+    "hud.qdot.delta"
+  ],
+  "ritual": [
+    "Emit HUD rehearsal stream at 30 Hz from telemetry.mock.solF1.v1",
+    "Validate pose lock and drift delta with capsule.motion.ledger.v1",
+    "Submit council review through capsule.audit.trace.v1",
+    "Freeze with scripts/freeze_relay_viewer.sh to append ledger digests",
+    "Broadcast across scrollstream via capsule.federate.v1"
+  ],
+  "governance": {
+    "reviewers": ["QueenBoo", "CiCi", "Dot"],
+    "quorum": 3,
+    "attestation_required": true
+  },
+  "ledger": {
+    "freeze_script": "scripts/freeze_relay_viewer.sh",
+    "log_file": "ledger/relay_viewer_freeze.log"
+  },
+  "status": "STAGED",
+  "attestation": {
+    "status": "STAGED",
+    "sealed_by": null,
+    "sealed_at": null,
+    "content_hash": null
+  }
+}
