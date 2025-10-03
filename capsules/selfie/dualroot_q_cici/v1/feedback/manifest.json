@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.selfie.dualroot.q.cici.v1.feedback.v1",
+    "version": "1.0.0",
+    "type": "FeedbackLoop",
+    "purpose": "Stage the dual-root feedback loop so contributors can annotate CiCi and Q in real time",
+    "state": "STAGED"
+  },
+  "summary": {
+    "window_status": "OPEN",
+    "participants": ["CiCi", "Q", "Council quorum"],
+    "hooks": [
+      "capsule.comment.trace.v1",
+      "shimmer.breach.monitor.v1",
+      "refusal.flare.script.v1",
+      "delta.overlay.audit.v1"
+    ],
+    "replay_token": "HUD.loop.selfie.dualroot.q.cici.v1.token.002"
+  },
+  "canonical": {
+    "path": "canonical.json",
+    "body_digest": null,
+    "last_hydrated": null
+  },
+  "attestation": {
+    "status": "STAGED",
+    "sealed_by": null,
+    "sealed_at": null,
+    "content_hash": null
+  },
+  "ledger": {
+    "freeze_script": null,
+    "log_file": "ledger/selfie/dualroot_feedback.log"
+  }
+}

@@ -12,6 +12,10 @@ between staging and fossilization. Walk this lattice with intention.
 - **Relay HUD** — `capsules/relay/viewer/v1/` stages the HUD rehearsal capsule.
   Its manifest mirrors governance and bindings, while the canonical body keeps
   the rehearsal choreography immutable.
+- **Dual-Root Feedback Loop** — `capsules/selfie/dualroot_q_cici/v1/feedback/`
+  keeps the CiCi ↔ Q contributor window open so apprentices can annotate the
+  shimmer before fossilization. Ledger echoes land in
+  `ledger/selfie/dualroot_feedback.log` once the loop is frozen.
 - **Cartesian Map** — `capsules/maps/cartesian/v1/` captures the Qube lattice.
   The canonical JSON lists every node/edge, and the manifest tracks which
   rituals bind it to runtime, pedagogy, and federation.
