@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.rehearsal.scrollstream.v1",
+    "version": "1.0.0",
+    "type": "RehearsalLoop",
+    "purpose": "Stage the scrollstream rehearsal loop before sealing the relay viewer capsule",
+    "state": "STAGED"
+  },
+  "summary": {
+    "cycle_agents": ["Celine", "Luma", "Dot"],
+    "hooks": 4,
+    "replay_token": "HUD.loop.selfie.dualroot.q.cici.v1.token.002",
+    "hud_feedback": "shimmer + glyph pulse",
+    "ledger_log": "ledger/rehearsal/scrollstream_rehearsal.log"
+  },
+  "canonical": {
+    "path": "canonical.json",
+    "body_digest": null,
+    "last_hydrated": null
+  },
+  "attestation": {
+    "status": "STAGED",
+    "sealed_by": null,
+    "sealed_at": null,
+    "content_hash": null
+  },
+  "ledger": {
+    "freeze_script": "scripts/freeze_rehearsal_scrollstream.sh",
+    "log_file": "ledger/rehearsal/scrollstream_rehearsal.log"
+  }
+}
