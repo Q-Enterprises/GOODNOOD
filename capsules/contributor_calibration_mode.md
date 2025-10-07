@@ -1,5 +1,10 @@
 # Contributor Calibration Capsule — Motif Prelude & Caption Morph Thread
 
+## Sentinel Trust Reissue Pipeline Alignment
+- **Deployment Status**: Sentinel Trust Reissue Pipeline finalized; credentials machine-verified for each mission.
+- **Operational Context**: World OS cleared for live deployment under continuous CI/CD governance following Qube Chronicles conclusion.
+- **Calibration Goal**: Maintain ZERO_DRIFT compliance while onboarding contributors into the finalized operational stream.
+
 ## Mode Invocation
 - **Tone**: Relational, immersive
 - **Objective**: Align contributors around the shared gesture registry before rehearsal.
