@@ -1,0 +1,65 @@
+{
+  "capsule_id": "capsule.relay.viewer.v1",
+  "protocol": "AxQxOS",
+  "schema": "p3l://relay.viewer",
+  "purpose": "Stage viewer relay capsule for HUD rehearsal and Council attestation",
+  "telemetry": {
+    "stream_ref": "capsule.telemetry.render.v1.events_examples",
+    "frame_rate_hz": 30,
+    "vector_payload": "tensor.semantic.cici.v2",
+    "prompt_braid": "capsule.prompt.qube.v1"
+  },
+  "motion_validation": {
+    "ledger_ref": "capsule.motion.ledger.v1",
+    "pose_lock_threshold": 0.0075,
+    "drift_delta_max": 0.003,
+    "glyph_sync": "qlock.tick"
+  },
+  "hud_channels": [
+    "glyph.pulse",
+    "aura.gold",
+    "qlock.tick",
+    "hud.qdot.delta"
+  ],
+  "rehearsal_steps": [
+    {
+      "step": 1,
+      "name": "emit_rehearsal_stream",
+      "artifact": "telemetry.mock.solF1.v1",
+      "outcome": "HUD receives sovereign glyph pulses"
+    },
+    {
+      "step": 2,
+      "name": "validate_motion_fidelity",
+      "artifact": "capsule.motion.ledger.v1",
+      "outcome": "pose lock and drift delta confirmed"
+    },
+    {
+      "step": 3,
+      "name": "council_review",
+      "artifact": "capsule.audit.trace.v1",
+      "outcome": "Merkle root verified and replay token minted"
+    },
+    {
+      "step": 4,
+      "name": "freeze_capsule",
+      "artifact": "scripts/freeze_relay_viewer.sh",
+      "outcome": "attestation sealed and digest broadcast"
+    },
+    {
+      "step": 5,
+      "name": "broadcast_scrollstream",
+      "artifact": "capsule.federate.v1",
+      "outcome": "relay viewer discoverable across mesh"
+    }
+  ],
+  "governance": {
+    "reviewers": [
+      "QueenBoo",
+      "CiCi",
+      "Dot"
+    ],
+    "quorum": 3,
+    "attestation_required": true
+  }
+}

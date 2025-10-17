@@ -1,0 +1,131 @@
+{
+  "edges": [
+    {
+      "rationale": "Motion ledger derives from SSOT lineage",
+      "source": "ssot",
+      "target": "motion_loop"
+    },
+    {
+      "rationale": "Canonical kit is rendered through QLOCK",
+      "source": "canon_kit",
+      "target": "qulock"
+    },
+    {
+      "rationale": "Runtime engine feeds the cockpit map",
+      "source": "qulock",
+      "target": "cartesian_map"
+    },
+    {
+      "rationale": "Pivot node consumes motion embeddings",
+      "source": "motion_loop",
+      "target": "pivot"
+    },
+    {
+      "rationale": "Map anchors contributor descent rituals",
+      "source": "cartesian_map",
+      "target": "pedagogy"
+    },
+    {
+      "rationale": "Cockpit map informs marketing relay broadcast",
+      "source": "cartesian_map",
+      "target": "marketing"
+    },
+    {
+      "rationale": "Sealed map is broadcast across the federation mesh",
+      "source": "cartesian_map",
+      "target": "federation"
+    }
+  ],
+  "nodes": [
+    {
+      "capsule_ref": "capsule.scene.ethereal.v2",
+      "description": "Single source of truth scene capsule",
+      "layer": "lineage",
+      "node_id": "ssot",
+      "position": [
+        0,
+        2
+      ]
+    },
+    {
+      "capsule_ref": "capsule.canon.kit.v1.1.1",
+      "description": "Canonical kit freeze binding runtime props",
+      "layer": "lineage",
+      "node_id": "canon_kit",
+      "position": [
+        1,
+        2
+      ]
+    },
+    {
+      "capsule_ref": "relay.legoF1.monza.loop.v1",
+      "description": "240-frame stop-motion relay ledger",
+      "layer": "motion",
+      "node_id": "motion_loop",
+      "position": [
+        0,
+        1
+      ]
+    },
+    {
+      "capsule_ref": "capsule.engine.qlock.runtime.v1",
+      "description": "QLOCK runtime engine attestation",
+      "layer": "runtime",
+      "node_id": "qulock",
+      "position": [
+        1,
+        1
+      ]
+    },
+    {
+      "capsule_ref": "capsule.node.q9.pivot.v1",
+      "description": "Q9 pivot node bridging semantics and artifacts",
+      "layer": "graph",
+      "node_id": "pivot",
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "capsule_ref": "capsule.map.qube.cartesian.v1",
+      "description": "Canonical cartesian lattice map sealed for runtime",
+      "layer": "graph",
+      "node_id": "cartesian_map",
+      "position": [
+        1,
+        0
+      ]
+    },
+    {
+      "capsule_ref": "capsule.relay.pedagogy.queenboo.v1",
+      "description": "Contributor descent capsule binding training loops",
+      "layer": "training",
+      "node_id": "pedagogy",
+      "position": [
+        2,
+        1
+      ]
+    },
+    {
+      "capsule_ref": "relay.trailer.legoF1.plan.v1",
+      "description": "Public relay plan for Lego F1 25 trailer",
+      "layer": "broadcast",
+      "node_id": "marketing",
+      "position": [
+        2,
+        0
+      ]
+    },
+    {
+      "capsule_ref": "capsule.federate.v1",
+      "description": "Broadcast frame for distributing sealed bundles",
+      "layer": "broadcast",
+      "node_id": "federation",
+      "position": [
+        3,
+        0
+      ]
+    }
+  ]
+}

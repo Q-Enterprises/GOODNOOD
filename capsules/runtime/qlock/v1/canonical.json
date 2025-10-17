@@ -1,0 +1,70 @@
+{
+  "engine": {
+    "name": "QLOCK Runtime Engine",
+    "version": "1.0.0",
+    "render_contract": "QLOCKRenderEngine.v1",
+    "replay_token": "engine.qlock.runtime.v1:20250925"
+  },
+  "governance": {
+    "attesters": [
+      "Scrollsmith",
+      "CouncilNode_01",
+      "CouncilNode_03",
+      "CouncilNode_08"
+    ],
+    "clock_source": "capsule.timestamp.hash.v1",
+    "quorum": 3
+  },
+  "binding_layers": {
+    "token_time_binding": {
+      "capsule_ref": "capsule.timestamp.hash.v1",
+      "description": "Binds glyph emission to sovereign ticks"
+    },
+    "vector_field_control": {
+      "capsule_ref": "capsule.vector.trace.v1",
+      "description": "Steers semantic vectors through runtime channels"
+    },
+    "render_fidelity": {
+      "capsule_ref": "glyphstream.overlay.v2",
+      "description": "Maintains pixel-accurate HUD overlays"
+    },
+    "counterfactual_balancing": {
+      "capsule_refs": [
+        "capsule.fork.audit.v1",
+        "capsule.linkage.trace.v1",
+        "emotional_payload.audit.v1"
+      ],
+      "description": "Audits alternate branches to preserve sovereign intent"
+    }
+  },
+  "linked_capsules": [
+    {
+      "capsule_ref": "capsule.relay.queenboo.v1",
+      "role": "relay_anchor"
+    },
+    {
+      "capsule_ref": "capsule.trace.mimic.queenboo.v1",
+      "role": "gesture_trace"
+    },
+    {
+      "capsule_ref": "capsule.braid.parent.queenboo.v1",
+      "role": "lineage_parent"
+    },
+    {
+      "capsule_ref": "capsule.codex.scrollsmith.committrail.v1",
+      "role": "audit_trail"
+    }
+  ],
+  "execution_interfaces": {
+    "hud_preview": "capsule.preview.hud.cici.render.v1",
+    "relay_invocation": "capsule.relay.echo.queenboo.v1"
+  },
+  "attuned_payloads": {
+    "emotions": [
+      "curiosity",
+      "bounce",
+      "sovereign_poise"
+    ],
+    "loop_policy": "capsule.relay.pedagogy.queenboo.v1"
+  }
+}

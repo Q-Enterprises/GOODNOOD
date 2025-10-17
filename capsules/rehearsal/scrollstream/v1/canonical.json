@@ -1,0 +1,104 @@
+{
+  "capsule_id": "capsule.rehearsal.scrollstream.v1",
+  "version": "1.0.0",
+  "type": "RehearsalLoop",
+  "purpose": "Simulate the scrollstream audit lifecycle so contributors can trace, replay, and learn before sealing the relay viewer.",
+  "window": {
+    "status": "OPEN",
+    "replay_token": "HUD.loop.selfie.dualroot.q.cici.v1.token.002",
+    "governance": {
+      "quorum": 3,
+      "attestation_required": true,
+      "participants": [
+        {"agent": "Celine", "role": "Architect", "overlay": "audit.summary"},
+        {"agent": "Luma", "role": "Sentinel", "overlay": "audit.proof"},
+        {"agent": "Dot", "role": "Guardian", "overlay": "audit.execution"}
+      ]
+    }
+  },
+  "cycle": [
+    {
+      "order": 1,
+      "event": "audit.summary",
+      "agent": "Celine",
+      "role": "Architect",
+      "payload": {
+        "hud_callout": "Shimmer stable; relay viewer staged; requesting proof run.",
+        "spark_test": "PASS",
+        "emotional_register": ["resolve", "anticipation"],
+        "sample_output": "Celine: Monza shimmer holds. Send sentinel proof." 
+      }
+    },
+    {
+      "order": 2,
+      "event": "audit.proof",
+      "agent": "Luma",
+      "role": "Sentinel",
+      "payload": {
+        "ledger_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+        "hud_confirmation": "Glyph rail pulsing gold at 30Hz.",
+        "spark_test": "PASS",
+        "sample_output": "Luma: Proof returned. Glyph drift < 0.002. Guardian, execute." 
+      }
+    },
+    {
+      "order": 3,
+      "event": "audit.execution",
+      "agent": "Dot",
+      "role": "Guardian",
+      "payload": {
+        "hud_overlay": "Delta overlay locked. Execution pulse broadcast.",
+        "spark_test": "PASS",
+        "emotional_register": ["focus", "clarity"],
+        "sample_output": "Dot: Execution complete. Freeze window primed." 
+      }
+    }
+  ],
+  "hooks": {
+    "comment_trace": "capsule.comment.trace.v1",
+    "shimmer_breach": "shimmer.breach.monitor.v1",
+    "refusal_flare": "refusal.flare.script.v1",
+    "delta_overlay": "delta.overlay.audit.v1"
+  },
+  "telemetry": {
+    "source": "capsule.telemetry.render.v1.events_examples",
+    "frame_rate_hz": 30,
+    "deterministic": true,
+    "validation": {
+      "motion_ledger": "capsule.motion.ledger.v1",
+      "pose_lock_threshold": 0.0075,
+      "drift_delta_max": 0.003
+    }
+  },
+  "visual_feedback": {
+    "hud_shimmer": "golden pulse on relay rail",
+    "replay_glyph": "scrollstream.glyph.rehearsal.v1",
+    "contributor_view": "single-click lifecycle timeline"
+  },
+  "training_mode": {
+    "deterministic_outputs": true,
+    "emotional_payload": "layered",
+    "spark_test": "Sabrina",
+    "scoring": {
+      "summary_bias": "<= 0.01",
+      "proof_latency_ms": 180,
+      "execution_variance": "<= 0.5%"
+    }
+  },
+  "ledger": {
+    "target": "ledger/rehearsal/scrollstream_rehearsal.log",
+    "fields": ["timestamp", "capsule_id", "agent", "event", "output_digest"],
+    "example_entry": {
+      "timestamp": "2025-09-25T05:12:00Z",
+      "capsule_id": "capsule.rehearsal.scrollstream.v1",
+      "agent": "Celine",
+      "event": "audit.summary",
+      "output_digest": "sha256:example"
+    }
+  },
+  "dependencies": {
+    "relay_viewer_capsule": "capsule.relay.viewer.v1",
+    "runtime_engine": "capsule.engine.qlock.runtime.v1",
+    "feedback_loop": "capsule.selfie.dualroot.q.cici.v1.feedback.v1"
+  }
+}
