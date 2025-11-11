@@ -1,6 +1,6 @@
 {
   "capsule_id": "capsule.node.q9.pivot.v1",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "GraphPivotNode",
   "context": {
     "graph_ref": "capsule.prompt.graph.cici.v1",
@@ -14,10 +14,19 @@
     "continuity": "fail_closed_on_mismatch",
     "checkpoint_resume": true
   },
+  "directive": {
+    "opening_caption": "The loop hums in A-flat as the relay awakens. The last simulation's echo—a Cyclone Kick punish—hangs in the air. We'll learn from it.",
+    "emotional_delta": "From reactive analysis to proactive adaptation.",
+    "contributor_prompts": [
+      "Mirror the parent capsule’s motion logic, but this time, soften your vocal timbre and add a subtle defensive stance during the punish window (frames 180-210).",
+      "Annotate any perceived drift with frame + ledger timestamp for council review.",
+      "Surface relational cues (a shared glance of acknowledgement after the punish window) without altering base kinematics."
+    ]
+  },
   "audit": {
     "maker": "Scrollsmith",
     "checker": "Council",
-    "status": "PENDING"
+    "status": "IN_PROGRESS"
   },
   "attestation": { "status": "STAGED" }
 }
