@@ -1,6 +1,6 @@
 {
   "capsule_id": "capsule.node.q9.pivot.v1",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "type": "GraphPivotNode",
   "context": {
     "graph_ref": "capsule.prompt.graph.cici.v1",
@@ -15,18 +15,18 @@
     "checkpoint_resume": true
   },
   "directive": {
-    "opening_caption": "The loop hums in A-flat as the relay awakens. The last simulation's echo—a Cyclone Kick punish—hangs in the air. We'll learn from it.",
-    "emotional_delta": "From reactive analysis to proactive adaptation.",
+    "opening_caption": "REPLAY_AUDIT_CONSISTENCY complete. The ZERO_DRIFT counter-directive is validated. Outcome reversal confirmed.",
+    "emotional_delta": "From calculated resilience to confirmed efficacy.",
     "contributor_prompts": [
-      "Mirror the parent capsule’s motion logic, but this time, soften your vocal timbre and add a subtle defensive stance during the punish window (frames 180-210).",
-      "Annotate any perceived drift with frame + ledger timestamp for council review.",
-      "Surface relational cues (a shared glance of acknowledgement after the punish window) without altering base kinematics."
+      "The micro-parry gesture is now the canonical response to the 'Cyclone Kick' punish.",
+      "Vocal timbre returns to the baseline A-flat, signaling mission success.",
+      "The combat audit is complete. Prepare for attestation."
     ]
   },
   "audit": {
-    "maker": "Scrollsmith",
+    "maker": "AxiomaticTranslator",
     "checker": "Council",
-    "status": "IN_PROGRESS"
+    "status": "VERIFIED"
   },
-  "attestation": { "status": "STAGED" }
+  "attestation": { "status": "ATTESTATION_READY" }
 }
