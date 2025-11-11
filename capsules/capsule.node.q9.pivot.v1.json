@@ -1,6 +1,6 @@
 {
   "capsule_id": "capsule.node.q9.pivot.v1",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "type": "GraphPivotNode",
   "context": {
     "graph_ref": "capsule.prompt.graph.cici.v1",
@@ -15,12 +15,12 @@
     "checkpoint_resume": true
   },
   "directive": {
-    "opening_caption": "REPLAY_AUDIT_CONSISTENCY complete. The ZERO_DRIFT counter-directive is validated. Outcome reversal confirmed.",
-    "emotional_delta": "From calculated resilience to confirmed efficacy.",
+    "opening_caption": "VALIDATE_COMBAT_AUDIT protocol complete. Attestation emitted to the Federation Vault.",
+    "emotional_delta": "From confirmed efficacy to immutable record.",
     "contributor_prompts": [
-      "The micro-parry gesture is now the canonical response to the 'Cyclone Kick' punish.",
-      "Vocal timbre returns to the baseline A-flat, signaling mission success.",
-      "The combat audit is complete. Prepare for attestation."
+      "ZERO_DRIFT is confirmed. Axiomatic Concordance is achieved.",
+      "All operational parameters are now sealed.",
+      "Stand by for next protocol."
     ]
   },
   "audit": {
@@ -28,5 +28,5 @@
     "checker": "Council",
     "status": "VERIFIED"
   },
-  "attestation": { "status": "ATTESTATION_READY" }
+  "attestation": { "status": "EMITTED" }
 }
