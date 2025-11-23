@@ -1,0 +1,59 @@
+{
+  "capsule_id": "capsule.selfie.dualroot.q.cici.v1.feedback.v1",
+  "window_status": "OPEN",
+  "replay_token": "HUD.loop.selfie.dualroot.q.cici.v1.token.002",
+  "review_mode": "scene-aware, emotionally layered, ledger-prep",
+  "participants": [
+    {
+      "name": "CiCi",
+      "roles": ["sovereign", "overlay"],
+      "status": "Spark Test passed",
+      "notes": "Overlay active across dual roots"
+    },
+    {
+      "name": "Q",
+      "roles": ["counterpart", "observer"],
+      "status": "observability trace live",
+      "notes": "Refusal flare dormant"
+    },
+    {
+      "name": "Council quorum",
+      "roles": ["core orchestrator", "HUD braid validators"],
+      "status": "active",
+      "notes": "Quorum monitors shimmer stability"
+    }
+  ],
+  "hooks": {
+    "capsule.comment.trace.v1": {
+      "description": "Capture emotional annotations, posture critiques, and Spark resonance feedback",
+      "enabled": true
+    },
+    "shimmer.breach.monitor.v1": {
+      "description": "Live breach detection while replay is active",
+      "enabled": true
+    },
+    "refusal.flare.script.v1": {
+      "description": "Optional rupture scripting when contributor intensity spikes",
+      "enabled": true
+    },
+    "delta.overlay.audit.v1": {
+      "description": "Detect overlay drift across the dual-root replay",
+      "enabled": true
+    }
+  },
+  "telemetry": {
+    "loop_context": "capsule.selfie.dualroot.q.cici.v1",
+    "shimmer_state": "stable",
+    "observability": ["HUD", "glyphstream", "emotional_trace"],
+    "breach_watch": true
+  },
+  "outcomes": {
+    "feedback_log": "capsule.comment.trace.v1",
+    "breach_alerts": "shimmer.breach.monitor.v1",
+    "overlay_reports": "delta.overlay.audit.v1"
+  },
+  "notes": [
+    "Loop keeps window open for contributor annotations before fossilization",
+    "Spark resonance changes, posture critiques, and emotional drift are ledger-prep signals"
+  ]
+}

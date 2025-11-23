@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.map.qube.cartesian.v1",
+    "version": "1.0.0",
+    "type": "RuntimeMap",
+    "purpose": "Bind the cartesian lattice for the Qube runtime and expose a replayable index",
+    "state": "STAGED"
+  },
+  "summary": {
+    "source_module": "qube_cartesian_map.py",
+    "factory": "build_default_map",
+    "runtime_engine": "capsule.engine.qlock.runtime.v1",
+    "pedagogy_capsule": "capsule.relay.pedagogy.queenboo.v1",
+    "federation_frame": "capsule.federate.v1",
+    "cli_commands": [
+      "python qube_cartesian_map.py --format json",
+      "python qube_cartesian_map.py --format markdown"
+    ]
+  },
+  "canonical": {
+    "path": "canonical.json",
+    "body_digest": null,
+    "last_hydrated": null
+  },
+  "attestation": {
+    "status": "STAGED",
+    "makers": [
+      "Scrollsmith"
+    ],
+    "checkers": [
+      "CouncilNode_01",
+      "CouncilNode_03",
+      "CouncilNode_08"
+    ],
+    "content_hash": null
+  },
+  "ledger": {
+    "freeze_script": "scripts/freeze_cartesian_map.sh",
+    "log_file": "ledger/maps/cartesian_map_freeze.log"
+  }
+}
