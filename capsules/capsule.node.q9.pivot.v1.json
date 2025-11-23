@@ -1,6 +1,6 @@
 {
   "capsule_id": "capsule.node.q9.pivot.v1",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "GraphPivotNode",
   "context": {
     "graph_ref": "capsule.prompt.graph.cici.v1",
@@ -14,10 +14,19 @@
     "continuity": "fail_closed_on_mismatch",
     "checkpoint_resume": true
   },
-  "audit": {
-    "maker": "Scrollsmith",
-    "checker": "Council",
-    "status": "PENDING"
+  "directive": {
+    "opening_caption": "VALIDATE_COMBAT_AUDIT protocol complete. Attestation emitted to the Federation Vault.",
+    "emotional_delta": "From confirmed efficacy to immutable record.",
+    "contributor_prompts": [
+      "ZERO_DRIFT is confirmed. Axiomatic Concordance is achieved.",
+      "All operational parameters are now sealed.",
+      "Stand by for next protocol."
+    ]
   },
-  "attestation": { "status": "STAGED" }
+  "audit": {
+    "maker": "AxiomaticTranslator",
+    "checker": "Council",
+    "status": "VERIFIED"
+  },
+  "attestation": { "status": "EMITTED" }
 }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World OS Audit</title>
+</head>
+<body>
+    <h1>Strategy Advisor - Core Directive Generation Logic</h1>
+    <script>
+        // Securely retrieve the API key using a session-based prompt.
+        let apiKey = sessionStorage.getItem('GEMINI_API_KEY');
+        if (!apiKey) {
+            apiKey = prompt("Sovereign Commander, please provide your Gemini API key to activate the Axiomatic Translator for this session:");
+            if (apiKey) {
+                sessionStorage.setItem('GEMINI_API_KEY', apiKey);
+                console.log("API Key received and stored for the current session.");
+            }
+        }
+
+        const API_KEY = apiKey;
+        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${API_KEY}`;
+
+        async function generateDirective(query, systemPrompt) {
+            if (!API_KEY) {
+                const errorMsg = "Critical Error: Gemini API Key is not configured. Please refresh and enter your key when prompted.";
+                console.error(errorMsg);
+                // You might want to display this error in the UI as well.
+                document.body.innerHTML += `<p style="color:red;">${errorMsg}</p>`;
+                return { text: errorMsg, sources: [] };
+            }
+
+            const payload = {
+                contents: [{ parts: [{ text: query }] }],
+                tools: [{ "google_search": {} }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            let response;
+            let retries = 0;
+            const maxRetries = 5;
+
+            while (retries < maxRetries) {
+                try {
+                    response = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (!response.ok) throw new Error(`API response error: ${response.status} ${response.statusText}`);
+                    break;
+                } catch (error) {
+                    console.error(`Attempt ${retries + 1} failed: ${error.message}`);
+                    retries++;
+                    if (retries >= maxRetries) {
+                        const maxRetriesError = "Maximum API retries exceeded.";
+                        document.body.innerHTML += `<p style="color:red;">${maxRetriesError}</p>`;
+                        throw new Error(maxRetriesError);
+                    }
+                    const delay = Math.pow(2, retries) * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+
+            const result = await response.json();
+            const candidate = result.candidates?.[0];
+
+            if (candidate && candidate.content?.parts?.[0]?.text) {
+                const text = candidate.content.parts[0].text;
+                let sources = [];
+                const groundingMetadata = candidate.groundingMetadata;
+                if (groundingMetadata && groundingMetadata.groundingAttributions) {
+                    sources = groundingMetadata.groundingAttributions
+                        .map(attribution => ({
+                            uri: attribution.web?.uri,
+                            title: attribution.web?.title,
+                        }))
+                        .filter(source => source.uri && source.title);
+                }
+                return { text, sources };
+            } else {
+                const failMsg = "Error: Directive generation failed or was filtered.";
+                console.error("API response lacked generated content.", JSON.stringify(result));
+                document.body.innerHTML += `<p style="color:red;">${failMsg}</p>`;
+                return { text: failMsg, sources: [] };
+            }
+        }
+    </script>
+</body>
+</html>
